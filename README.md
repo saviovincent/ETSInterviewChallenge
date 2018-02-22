@@ -13,4 +13,8 @@ dealOneCard()  -  returns one card from the deck to the caller. Specifically, a 
 Requirements for Deck of Cards assignments
 1. You may use either Java,  Kotlin , Swift, or C# as your language of choice.
 2. If using Java/Kotlin, use the  Gradle  build system.
-  
+
+SOLUTION:
+
+Solved using Java 1.8 and gradle buidl tool system.
+  
