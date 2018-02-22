@@ -1,6 +1,5 @@
 # ETSInterviewChallenge
- Pre-Interview Code Sample
- 
+
 Many details for the following assignments have been left intentionally vague. Follow the principle of least surprise in making reasonable decisions regarding the implementation. While this is a trivial assignment, pretend that this is production code. Take whatever measures you feel are required for your code to meet this bar. We are not concerned with how quickly you complete this assignment. Take your time and “do it right.”
 Post your completed assignment on GitHub.
 Deck of Cards
