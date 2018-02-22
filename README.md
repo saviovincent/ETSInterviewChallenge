@@ -16,5 +16,5 @@ Requirements for Deck of Cards assignments
 
 SOLUTION:
 
-Solved using Java 1.8 and gradle buidl tool system.
+Solved using Java 1.8 and gradle build tool system.
   
