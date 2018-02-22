@@ -3,21 +3,21 @@ import java.util.Collections;
 
 public class Play {
 
-    private static final int cardNumericStartValue = 2;
-    private static final int cardNumericEndValue = 10;
-    private static final int deckStartIndex = 0;
-    private static final int deckEndIndex = 51;
-    private static final int randomMin = 0;
+    private static final int CARDNUMERICSTARTVALUE = 2;
+    private static final int CARDNUMERICENDVALUE = 10;
+    private static final int DECKSTARTINDEX = 0;
+    private static final int DECKENDINDEX = 51;
+    private static final int RANDOMMIN = 0;
     private static int randomMax = 51;
 
-    ArrayList<Card> deck = new ArrayList<>(51);
+    ArrayList<Card> deck = new ArrayList<>(52);
 
 private void initialiseCards(){
 
-    ArrayList<Card> heartCards = new ArrayList<Card>(12);
-    ArrayList<Card> spadeCards = new ArrayList<Card>(12);
-    ArrayList<Card> diamondCards = new ArrayList<Card>(12);
-    ArrayList<Card> clubCards = new ArrayList<Card>(12);
+    ArrayList<Card> heartCards = new ArrayList<Card>(13);
+    ArrayList<Card> spadeCards = new ArrayList<Card>(13);
+    ArrayList<Card> diamondCards = new ArrayList<Card>(13);
+    ArrayList<Card> clubCards = new ArrayList<Card>(13);
 
     populateCards("Heart",heartCards);
     deck.addAll(heartCards);
@@ -35,7 +35,7 @@ private void initialiseCards(){
 
 private void populateCards(String suit, ArrayList<Card> cardsList){
 
-    for(int i = cardNumericStartValue; i <= cardNumericEndValue; i++){
+    for(int i = CARDNUMERICSTARTVALUE; i <= CARDNUMERICENDVALUE; i++){
 
         Card c = new Card( suit, Integer.toString(i));
         cardsList.add(c);
@@ -64,7 +64,7 @@ private Card dealOneCard(){
 
     if(!deck.isEmpty()){
 
-        int random = (int)(Math.random() * ((randomMax - randomMin) + 1)) + randomMin;
+        int random = (int)(Math.random() * ((randomMax - RANDOMMIN) + 1)) + RANDOMMIN;
 
         Card removedCard = deck.get(random);
 
@@ -90,7 +90,7 @@ public static void main(String args[]){
 
     play.shuffle();
 
-    for (int i = deckStartIndex; i <= deckEndIndex; i++){
+    for (int i = DECKSTARTINDEX; i <= DECKENDINDEX; i++){
 
         Card dealt = play.dealOneCard();
 
@@ -104,4 +104,3 @@ public static void main(String args[]){
 }
 
 }
-
