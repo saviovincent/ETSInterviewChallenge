@@ -1,3 +1,7 @@
+/**
+ * The main class
+ */
+
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -12,7 +16,10 @@ public class Play {
 
     ArrayList<Card> deck = new ArrayList<>(52);
 
-private void initialiseCards(){
+    /**
+     * Method used to instantiate cards
+     */
+    private void initialiseCards(){
 
     ArrayList<Card> heartCards = new ArrayList<Card>(13);
     ArrayList<Card> spadeCards = new ArrayList<Card>(13);
@@ -33,12 +40,17 @@ private void initialiseCards(){
 
 }
 
-private void populateCards(String suit, ArrayList<Card> cardsList){
+    /**
+     *
+     * @param suit can be either Heart/Spade/Diamond/Club
+     * @param cardsList used to populate cards of a suit
+     */
+    private void populateCards(String suit, ArrayList<Card> cardsList){
 
     for(int i = CARDNUMERICSTARTVALUE; i <= CARDNUMERICENDVALUE; i++){
 
-        Card c = new Card( suit, Integer.toString(i));
-        cardsList.add(c);
+        Card card = new Card( suit, Integer.toString(i));
+        cardsList.add(card);
     }
 
     Card king = new Card(suit, "King");
@@ -53,14 +65,21 @@ private void populateCards(String suit, ArrayList<Card> cardsList){
 
 }
 
-private void shuffle(){
+    /**
+     * Method to shuffle cards in a deck
+     */
+    private void shuffle(){
 
     Collections.shuffle(deck);
 
     deck.forEach((card -> System.out.println("Card: "+card.getValue() + " of "+ card.getSuit())));
 }
 
-private Card dealOneCard(){
+    /**
+     * Generates a random number and returns card dealt from deck
+     * @return one card from the deck
+     */
+    private Card dealOneCard(){
 
     if(!deck.isEmpty()){
 
@@ -82,7 +101,11 @@ private Card dealOneCard(){
     }
 }
 
-public static void main(String args[]){
+    /**
+     * Main function
+     * @param args
+     */
+    public static void main(String args[]){
 
     Play play = new Play();
 

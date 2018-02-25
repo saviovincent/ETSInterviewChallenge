@@ -1,3 +1,7 @@
+/**
+ * A simple POJO to define cards in deck
+ */
+
 public class Card {
 
     private String suit;
